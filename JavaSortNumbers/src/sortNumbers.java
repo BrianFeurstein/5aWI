@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class sortNumbers {
-
 
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<Integer>();
@@ -13,43 +11,44 @@ public class sortNumbers {
         list.add(9);
         list.add(4);
 
-        list(list);
+        sortList(list);
 
-        System.out.println(list);
     }
 
 
-    public static List list(List<Integer> list) {
-
+    public static List sortList(List<Integer> list) {
+        int i = 1;
         int n = 0;
-        boolean listeIstSortiert = false;
-        do {
-            int currentNumber = list.get(n);
-            if (n < list.size() - 1) {
 
-                int nextNumber = list.get(n + 1);
 
-                if (nextNumber < currentNumber) {
-                    //list.remove(nextNumber);
-                    int storeNextNumber = nextNumber;
-                    list.add(n, storeNextNumber);
-                    list.remove(n + 2);
-                }
-
-            } else {
-
-                System.out.println("Die Liste ist sortiert");
+        while (i < list.size()) {
+            n = 0;
+            for (int j = i; j > 0; j--) {
+                if (list.get(i) < list.get(j - 1)) {
+                    n++;
+                } else break;
             }
-
-            n++;
-        } while (n < list.size());
-
+            if (n == 0) {
+            } else {
+                int unsortedValue = list.get(i);
+                list.remove(i);
+                list.add(i - n, unsortedValue);
+            }
+            i++;
+            System.out.println(list);
+        }
 
         return list;
-    }
 
+
+    }
+    public static int[] revert(int[] data){
+        for(int i = 0; i <data.length;i++ ){
+            System.out.println(data);
+        }
+    return data;
+    }
 
 
 }
-
 
