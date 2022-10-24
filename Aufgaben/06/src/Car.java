@@ -9,7 +9,7 @@ public class Car {
 
 
     public void honk(){
-        System.out.println("Ich bin ein " + this.brand + " und habe die Farbe " + this.color + " und habe " + this.getEngine().getHorsePower());
+        System.out.println("Ich bin ein " + this.brand + " und habe die Farbe " + this.color + " und habe " + this.getEngine().getHorsePower() + "PS");
 
 
     }
