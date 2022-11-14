@@ -12,8 +12,6 @@ public class Car {
     private List<Tires> tires;
 
 
-
-
     public void honk(){
         System.out.println("Ich bin ein " + this.brand + " und habe die Farbe " + this.color + " und habe " + this.getEngine().getHorsePower() + "PS");
         System.out.println("Die Fuellmenge betraegt aktuell " + this.getTank().getCurrentFillingAmount() + " Liter von " + this.getTank().getMaxFillingAmount() + " Liter");
