@@ -1,8 +1,7 @@
 public class CheckingsAccount extends BaseAccount{
     private int limit;
 
-    public CheckingsAccount(double balance, int limit) {
-        super(balance);
+    public CheckingsAccount(int limit) {
         this.limit = limit;
     }
 

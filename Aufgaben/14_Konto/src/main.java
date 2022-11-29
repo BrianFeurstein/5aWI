@@ -1,11 +1,18 @@
 public class main {
     public static void main(String[] args) {
-        BaseAccount b1 = new BaseAccount(5000);
+            CheckingsAccount ca = new CheckingsAccount(3000);
+            ca.deposit(100);
+            ca.withdraw(50);
+            ca.withdraw(10);
+            System.out.println(ca.getBalance());
 
-        b1.deposit(1000);
+            SavingsAccount sa = new SavingsAccount();
+            sa.deposit(1000);
+            sa.withdraw(4000);
+            System.out.println(sa.getBalance());
 
-        CheckingsAccount c1 = new CheckingsAccount(b1.getBalance(),4);
-        c1.withdraw(3000);
-        c1.
+
+
+
     }
 }
