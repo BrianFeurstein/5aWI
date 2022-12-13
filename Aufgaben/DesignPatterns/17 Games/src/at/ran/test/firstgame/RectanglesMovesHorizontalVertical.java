@@ -1,29 +1,33 @@
 package at.ran.test.firstgame;
 
 import org.newdawn.slick.*;
-import org.newdawn.slick.tests.AnimationTest;
 
-public class Rectangles extends BasicGame {
+public class RectanglesMovesHorizontalVertical extends BasicGame {
     private int x;
     private int y;
 
-    public Rectangles(String title) {
+    public RectanglesMovesHorizontalVertical(String title) {
         super(title);
     }
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
         this.x = 100;
+
     }
 
     @Override
     public void update(GameContainer gameContainer, int i) throws SlickException {
-
         this.x++;
-        this.y++;
-        if(this.x > 800){
-            this.x=0;
-            this.y=0;
+
+        if (this.x > 700) {
+            this.x = 700;
+            this.y++;
+
+        }
+        else if (this.y > 500) {
+            this.y = 500;
+            this.x--;
         }
     }
 
@@ -35,7 +39,7 @@ public class Rectangles extends BasicGame {
 
     public static void main(String[] argv) {
         try {
-            AppGameContainer container = new AppGameContainer(new Rectangles("Rectangles"));
+            AppGameContainer container = new AppGameContainer(new RectanglesMovesHorizontalVertical("Rectangles"));
             container.setDisplayMode(800, 600, false);
             container.start();
         } catch (SlickException e) {
