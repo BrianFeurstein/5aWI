@@ -64,12 +64,11 @@ public class Rectangles extends BasicGame {
             }
         }
 //Rechteck bewegt sich in der Form eines Rechtecks -- ende
-
-        if (this.cy < 500 && this.circleCounter == 0) {
+//Kreis bewegt sich von unten nach oben -- start
+        if (this.cy < 500) {
             this.cy ++;
-            this.circleCounter = 1;
-        }else if(this.cy > 500 && this.circleCounter == 1){
-            this.cy--;
+        }else{
+            this.cy = 0;
         }
 
     }
