@@ -1,6 +1,6 @@
 public class CounterSingleton {
     private static CounterSingleton instance = null;
-    private int Counter = 0;
+    private int counter = 0;
 
     private CounterSingleton() {
     }
@@ -15,10 +15,10 @@ public class CounterSingleton {
     }
 
     public void increaseCounter() {
-        ++this.Counter;
+        ++this.counter;
     }
 
     public int getCounter() {
-        return this.Counter;
+        return this.counter;
     }
 }
